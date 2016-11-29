@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Sudoku Solver</title>
+    <script src="SudokuSolver.js" type="text/javascript"></script>
+    <style>
+        input[type=text] {
+            width: 40px;
+            height: 40px;
+            text-align:center;
+            font-size:20px;
+        }
+
+        .grayBackground {
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Javascript Sudoku Solver</h1>
+    <table>
+        <tr id="row1">
+            <td><input id="Text11" type="text" maxlength="1" value="6"/></td>
+            <td><input id="Text12" type="text" maxlength="1" value="3"/></td>
+            <td><input id="Text13" type="text" maxlength="1" /></td>
+            <td><input id="Text14" class="grayBackground" type="text" maxlength="1" value="7"/></td>
+            <td><input id="Text15" class="grayBackground" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text16" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text17" type="text" maxlength="1" /></td>
+            <td><input id="Text18" type="text" maxlength="1" /></td>
+            <td><input id="Text19" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row2">
+            <td><input id="Text21" type="text" maxlength="1" /></td>
+            <td><input id="Text22" type="text" maxlength="1" /></td>
+            <td><input id="Text23" type="text" maxlength="1" /></td>
+            <td><input id="Text24" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text25" class="grayBackground" type="text" maxlength="1" value="3"/></td>
+            <td><input id="Text26" class="grayBackground" type="text" maxlength="1" value="6"/></td>
+            <td><input id="Text27" type="text" maxlength="1" value="2"/></td>
+            <td><input id="Text28" type="text" maxlength="1" /></td>
+            <td><input id="Text29" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row3">
+            <td><input id="Text31" type="text" maxlength="1" /></td>
+            <td><input id="Text32" type="text" maxlength="1" value="2"/></td>
+            <td><input id="Text33" type="text" maxlength="1" value="4"/></td>
+            <td><input id="Text34" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text35" class="grayBackground" type="text" maxlength="1" value="1"/></td>
+            <td><input id="Text36" class="grayBackground" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text37" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text38" type="text" maxlength="1" value="6"/></td>
+            <td><input id="Text39" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row4">
+            <td><input id="Text41" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text42" class="grayBackground" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text43" class="grayBackground" type="text" maxlength="1" value="1"/></td>
+            <td><input id="Text44" type="text" maxlength="1" /></td>
+            <td><input id="Text45" type="text" maxlength="1" /></td>
+            <td><input id="Text46" type="text" maxlength="1" value="4"/></td>
+            <td><input id="Text47" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text48" class="grayBackground" type="text" maxlength="1" value="2"/></td>
+            <td><input id="Text49" class="grayBackground" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row5">
+            <td><input id="Text51" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text52" class="grayBackground" type="text" maxlength="1" value="6"/></td>
+            <td><input id="Text53" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text54" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text55" type="text" maxlength="1" value="2"/></td>
+            <td><input id="Text56" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text57" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text58" class="grayBackground" type="text" maxlength="1" value="5"/></td>
+            <td><input id="Text59" class="grayBackground" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row6">
+            <td><input id="Text61" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text62" class="grayBackground" type="text" maxlength="1" value="4"/></td>
+            <td><input id="Text63" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text64" type="text" maxlength="1" value="1"/></td>
+            <td><input id="Text65" type="text" maxlength="1" /></td>
+            <td><input id="Text66" type="text" maxlength="1" /></td>
+            <td><input id="Text67" class="grayBackground" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text68" class="grayBackground" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text69" class="grayBackground" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row7">
+            <td><input id="Text71" type="text" maxlength="1" /></td>
+            <td><input id="Text72" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text73" type="text" maxlength="1" value="5"/></td>
+            <td><input id="Text74" class="grayBackground" type="text" maxlength="1" value="3"/></td>
+            <td><input id="Text75" class="grayBackground" type="text" maxlength="1" value="6"/></td>
+            <td><input id="Text76" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text77" type="text" maxlength="1" value="7"/></td>
+            <td><input id="Text78" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text79" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row8">
+            <td><input id="Text81" type="text" maxlength="1" /></td>
+            <td><input id="Text82" type="text" maxlength="1" /></td>
+            <td><input id="Text83" type="text" maxlength="1" value="3"/></td>
+            <td><input id="Text84" class="grayBackground" type="text" maxlength="1" value="8"/></td>
+            <td><input id="Text85" class="grayBackground" type="text" maxlength="1" value="9"/></td>
+            <td><input id="Text86" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text87" type="text" maxlength="1" /></td>
+            <td><input id="Text88" type="text" maxlength="1" /></td>
+            <td><input id="Text89" type="text" maxlength="1" /></td>
+        </tr>
+        <tr id="row9">
+            <td><input id="Text91" type="text" maxlength="1" /></td>
+            <td><input id="Text92" type="text" maxlength="1" /></td>
+            <td><input id="Text93" type="text" maxlength="1" /></td>
+            <td><input id="Text94" class="grayBackground" type="text" maxlength="1" /></td>
+            <td><input id="Text95" class="grayBackground" type="text" maxlength="1" value="4"/></td>
+            <td><input id="Text96" class="grayBackground" type="text" maxlength="1" value="5"/></td>
+            <td><input id="Text97" type="text" maxlength="1" /></td>
+            <td><input id="Text98" type="text" maxlength="1" value="3"/></td>
+            <td><input id="Text99" type="text" maxlength="1" value="8"/></td>
+        </tr>
+    </table>
+    <input type="button" value="Solve" onclick="solveSudokuPuzzle()"/>
+    <input type="button" value="Clear" onclick="clearAllBoxes()"/>
+</body>
+</html>
