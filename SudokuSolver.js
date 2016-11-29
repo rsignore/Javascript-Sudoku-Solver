@@ -305,7 +305,6 @@ class sudokuCell {
         //
         if(this.cellValue !== 0) {
             this.scratchPad = [];
-//            this.scratchPad.push(this.cellValue);
         }
         else {
           this.scratchPad = [1,2,3,4,5,6,7,8,9];
